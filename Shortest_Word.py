@@ -1,6 +1,2 @@
 def find_short(s):
-    list1 = s.split()
-    size = len(list1.pop(0))
-    for word in list1:
-        size = min(len(word), size)
-    return size
+    return min(len(word) for word in s.split())

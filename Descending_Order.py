@@ -1,2 +1,2 @@
 def descending_order(num):
-    return int(''.join(sorted(str(num), reverse=True)))
+    return int("".join(sorted(str(num), reverse=True)))

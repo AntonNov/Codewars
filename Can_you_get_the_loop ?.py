@@ -5,7 +5,7 @@ def loop_size(node):
     while hare != turtle:
         hare = hare.next.next
         turtle = turtle.next
-    hare = hare.next.next  
+    hare = hare.next.next
     turtle = turtle.next
     cnt = 1
     while hare != turtle:

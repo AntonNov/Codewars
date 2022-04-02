@@ -20,7 +20,7 @@
 * [The Hashtag Generator](https://www.codewars.com/kata/the-hashtag-generator)
 [Решение](The_Hashtag_Generator.py)
 * [Tic-Tac-Toe Checker](https://www.codewars.com/kata/tic-tac-toe-checker)
-[Решение](Tic_Tac_Toe_Checker.py)
+[Решение](Tic-Tac-Toe_Checker.py)
 * [Vector class](https://www.codewars.com/kata/vector-class)
 [Решение](Vector_class.py)
 * [Write Number in Expanded Form](https://www.codewars.com/kata/write-number-in-expanded-form)

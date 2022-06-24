@@ -1,32 +1,27 @@
 class Vector:
     def __init__(self, list1):
-        self.list1 = list1
+        self.coordinates = list(list1)
 
     def __str__(self):
-        return "({})".format(",".join(str(el) for el in self.list1))
+        return str(tuple(self.coordinates)).replace(' ', '')
 
     def add(self, other):
-        if len(self.list1) != len(other.list1):
+        if len(self.coordinates) != len(other.coordinates):
             raise ValueError("Vectors must be the same length")
-        return Vector([el[0] + el[1] for el in zip(self.list1, other.list1)])
+        return Vector([x + y for x, y in zip(self.coordinates, other.coordinates)])
 
     def subtract(self, other):
-        if len(self.list1) != len(other.list1):
+        if len(self.coordinates) != len(other.coordinates):
             raise ValueError("Vectors must be the same length")
-        return Vector([el[0] - el[1] for el in zip(self.list1, other.list1)])
+        return Vector([x - y for x, y in zip(self.coordinates, other.coordinates)])
 
     def dot(self, other):
-        if len(self.list1) != len(other.list1):
+        if len(self.coordinates) != len(other.coordinates):
             raise ValueError("Vectors must be the same length")
-        return sum(el[0] * el[1] for el in zip(self.list1, other.list1))
+        return sum(x * y for x, y in zip(self.coordinates, other.coordinates))
 
     def norm(self):
-        return sum(el ** 2 for el in self.list1) ** 0.5
+        return sum(el ** 2 for el in self.coordinates) ** 0.5
 
     def equals(self, other):
-        if len(self.list1) != len(other.list1):
-            return False
-        for el in zip(self.list1, other.list1):
-            if el[0] != el[1]:
-                return False
-        return True
+        return self.coordinates == other.coordinates
